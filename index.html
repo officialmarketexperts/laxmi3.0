@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gujarati Trader</title>
 
-<!-- ================= FIXED META PIXEL ================= -->
+<!-- ================= META PIXEL ================= -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,16 +15,28 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
+// Initialize Pixel
 fbq('init', '1514152343176922');
-// Removed duplicate PageView - automatic fires once
+
+// ===== Strict 1 device = 1 PageView =====
+const PAGEVIEW_KEY = "gt_pageview_tracked";
+if (!localStorage.getItem(PAGEVIEW_KEY)) {
+    fbq('track', 'PageView');
+    localStorage.setItem(PAGEVIEW_KEY, "true");
+    console.log("✅ PageView tracked (1 device)");
+} else {
+    console.log("⛔ PageView already tracked");
+}
 </script>
 <noscript>
   <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1514152343176922&ev=PageView&noscript=1"
-/></noscript>
+src="https://www.facebook.com/tr?id=1514152343176922&ev=PageView&noscript=1"/>
+</noscript>
 <!-- ================= END META PIXEL ================= -->
 
 <style>
+/* -------- Your CSS from second code -------- */
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -198,17 +210,27 @@ h1{font-size:28px;letter-spacing:1.5px}
   </div>
 </div>
 
-<!-- ✅ FIXED & FASTER TELEGRAM SCRIPT -->
 <script>
+/* ===== Strict 1 device = 1 Telegram Subscribe ===== */
+const SUBSCRIBE_KEY = "gt_subscribe_tracked";
+
 function trackTelegramSubscribe(){
-  if(!localStorage.getItem('tg_subscribed')){
-    fbq('track','Subscribe',{platform:'telegram'});
-    localStorage.setItem('tg_subscribed','1');
+  if(!localStorage.getItem(SUBSCRIBE_KEY)){
+    fbq('track','Lead');
+    fbq('trackCustom','TelegramSubscribe',{
+      source:'Landing Page',
+      platform:'Telegram'
+    });
+    localStorage.setItem(SUBSCRIBE_KEY,'true');
+    console.log("✅ Telegram Subscribe tracked (1 device)");
+  } else {
+    console.log("⛔ Telegram Subscribe already tracked");
   }
-  // Instant redirect (50ms)
+
+  // Redirect instantly
   setTimeout(function(){
     window.location.href = "https://t.me/+iFU_NjjkEBtiY2M9";
-  }, 50);
+  },50);
 }
 </script>
 
