@@ -39,8 +39,6 @@ body{
   background:radial-gradient(circle at top,#1a1f4a,#050816 70%);
   color:#fff;
 }
-
-/* MAIN CARD */
 .container{
   max-width:420px;
   margin:auto;
@@ -57,24 +55,23 @@ body{
   border:1px solid rgba(255,215,0,0.2);
 }
 
-/* LOGO */
+/* LOGO FIX */
 .logo{
   width:120px;
   height:120px;
   border-radius:50%;
+  object-fit:cover;
+  display:block;
+  margin:0 auto 20px auto;
   border:4px solid #fff;
   box-shadow:
     0 0 40px rgba(255,215,0,0.9),
     0 0 80px rgba(255,200,0,0.4);
-  margin-bottom:20px;
 }
 
-/* TEXT */
 h1{
   font-size:28px;
   font-weight:800;
-  margin-bottom:8px;
-  letter-spacing:1px;
 }
 .tag{
   font-size:14px;
@@ -87,7 +84,6 @@ h1{
   margin-bottom:20px;
 }
 
-/* CTA */
 .cta{
   display:block;
   padding:18px;
@@ -100,37 +96,28 @@ h1{
   box-shadow:
     0 20px 60px rgba(255,215,0,0.6),
     inset 0 2px 6px rgba(255,255,255,0.5);
-  transition:.3s;
-}
-.cta:hover{
-  transform:scale(1.05);
 }
 
-/* FEATURES */
 .features{
   text-align:left;
   margin-top:20px;
 }
 .features div{
   margin:12px 0;
-  font-size:14px;
 }
 
-/* BADGE */
 .badge{
   margin-top:18px;
   font-size:13px;
   color:#aaa;
 }
 
-/* LIVE */
 #liveActivity{
   margin-top:15px;
   font-size:13px;
   color:#ffd700;
 }
 
-/* DISCLAIMER */
 .disclaimer{
   margin-top:20px;
   font-size:11px;
@@ -144,10 +131,11 @@ h1{
 <div class="container">
   <div class="card">
 
-    <!-- LOGO -->
-    <img src="https://uploads.onecompiler.io/447v8k97f/44agms2de/WhatsApp%20Image%202025-12-29%20at%2018.24.42.jpeg" class="logo">
+    <!-- LOGO (FIXED LINK) -->
+    <img src="https://res.cloudinary.com/dqhbtoh8u/image/upload/v1774449836/WhatsApp_Image_2025-12-29_at_18.24.42_mklank.jpg"
+         class="logo"
+         onerror="this.src='https://i.imgur.com/2DhmtJ4.png';">
 
-    <!-- NAME -->
     <h1>🤴ગુજરાતી Trader🤴</h1>
     <div class="tag">Options Learning • Smart Trading</div>
 
@@ -158,7 +146,6 @@ h1{
       🚀 JOIN FREE TELEGRAM
     </a>
 
-    <!-- FEATURES -->
     <div class="features">
       <div>📊 Nifty • BankNifty Analysis</div>
       <div>🎯 Entry • Target • Stoploss System</div>
@@ -168,7 +155,6 @@ h1{
 
     <div class="badge">🟢 Active daily during market hours</div>
 
-    <!-- LIVE ACTIVITY -->
     <div id="liveActivity">🟢 Loading activity...</div>
 
     <div class="disclaimer">
@@ -178,29 +164,45 @@ h1{
   </div>
 </div>
 
-<!-- TRACKING -->
+<!-- ✅ UPDATED TRACKING SYSTEM -->
 <script>
 const LEAD_KEY = "telegram_lead_tracked";
+const btn = document.getElementById('joinBtn');
 
-document.getElementById('joinBtn').addEventListener('click', function(){
-    if(!localStorage.getItem(LEAD_KEY)){
+btn.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    if(localStorage.getItem(LEAD_KEY) === "true"){
+        window.open(btn.href, "_blank");
+        return;
+    }
+
+    btn.innerText = "Opening...";
+    btn.style.pointerEvents = "none";
+
+    setTimeout(function(){
+
         fbq('track','Lead');
         fbq('trackCustom','TelegramJoin',{
             source:'Landing Page',
             platform:'Telegram'
         });
+
         localStorage.setItem(LEAD_KEY, "true");
-    }
+
+        window.open(btn.href, "_blank");
+
+    }, 800);
+
 });
 </script>
 
-<!-- LIVE NAMES -->
+<!-- LIVE ACTIVITY -->
 <script>
 const names = [
 "Amit Patel","Rahul Sharma","Vikram Singh","Rohit Mehta","Karan Gupta",
-"Suresh Yadav","Deepak Kumar","Manish Patel","Arjun Singh","Nitin Sharma",
-"Ravi Gupta","Pankaj Yadav","Aakash Verma","Neeraj Singh","Tarun Jain",
-"Vikas Patel","Mohit Sharma","Ajay Kumar","Rakesh Singh","Dinesh Yadav"
+"Suresh Yadav","Deepak Kumar","Manish Patel","Arjun Singh","Nitin Sharma"
 ];
 
 function showActivity(){
