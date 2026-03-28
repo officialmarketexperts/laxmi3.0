@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="gu">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ગુજરાતી ટ્રેડર</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>2XGROWTH</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <!-- META PIXEL -->
 <script>
@@ -23,8 +23,7 @@ s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','971355972233072');
-fbq('track','PageView');
+fbq('init', '971355972233072');
 </script>
 
 <noscript>
@@ -33,187 +32,193 @@ src="https://www.facebook.com/tr?id=971355972233072&ev=PageView&noscript=1"/>
 </noscript>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
+
 body{
-  margin:0;
   font-family:'Poppins',sans-serif;
-  background:radial-gradient(circle at top,#1a1f4a,#050816 70%);
+  background:#000;
   color:#fff;
-}
-.container{
-  max-width:420px;
-  margin:auto;
-  padding:30px 20px;
-}
-.card{
-  background:linear-gradient(180deg,#121737,#070b1f);
-  border-radius:30px;
-  padding:40px 25px;
   text-align:center;
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.9),
-    0 0 60px rgba(255,215,0,0.15);
-  border:1px solid rgba(255,215,0,0.2);
 }
 
-/* LOGO FIX */
-.logo{
-  width:120px;
-  height:120px;
+/* HERO */
+.hero{
+  padding:40px 20px 30px;
+}
+
+/* LOGO */
+.hero img{
+  width:130px;
+  height:130px;
   border-radius:50%;
   object-fit:cover;
-  display:block;
-  margin:0 auto 20px auto;
-  border:4px solid #fff;
+  border:3px solid rgba(255,255,255,0.2);
   box-shadow:
-    0 0 40px rgba(255,215,0,0.9),
-    0 0 80px rgba(255,200,0,0.4);
+    0 0 20px rgba(255,215,0,0.8),
+    0 0 40px rgba(0,198,255,0.4);
+  margin-bottom:16px;
 }
-
-h1{
-  font-size:28px;
-  font-weight:800;
-}
-.tag{
-  font-size:14px;
-  color:#dcdfff;
-  margin-bottom:20px;
-}
-.trust{
-  font-size:13px;
-  color:#ffd700;
-  margin-bottom:20px;
-}
-
+  
+/* NAME */
+.trader-name{
+   font-size: 30px;
+        margin-top: 25px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        animation: fadeDown 1.4s ease-in-out;
+    }
+ 
+/* CTA */
 .cta{
-  display:block;
-  padding:18px;
-  border-radius:60px;
-  background:linear-gradient(180deg,#ffd700,#ffb300);
-  color:#000;
+  display:inline-block;
+  width:100%;
+  max-width:360px;
+  padding:16px;
+  margin:0 auto 22px;
+  font-size:17px;
   font-weight:800;
+  border-radius:50px;
+  background:linear-gradient(90deg,#ff0080,#8e2de2,#00c6ff);
+  color:#fff;
   text-decoration:none;
-  margin:25px 0;
-  box-shadow:
-    0 20px 60px rgba(255,215,0,0.6),
-    inset 0 2px 6px rgba(255,255,255,0.5);
+  box-shadow:0 10px 30px rgba(0,0,0,.7);
+  transition:.2s ease;
+}
+.cta:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 30px rgba(0,198,255,.9);
 }
 
-.features{
+/* TITLE */
+.hero h1{
+  font-size:30px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.hero p{
+  font-size:15px;
+  color:#ccc;
+}
+
+/* INFO */
+.info{
+  padding:28px 20px;
+}
+
+.card{
+  background:linear-gradient(180deg,#0f1629,#05070d);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 0 30px rgba(0,255,255,.12);
+}
+
+.point{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  margin:14px 0;
+}
+
+.point i{
+  font-size:18px;
+  color:#00c6ff;
+}
+
+.point span{
+  font-size:15px;
   text-align:left;
-  margin-top:20px;
-}
-.features div{
-  margin:12px 0;
 }
 
-.badge{
-  margin-top:18px;
+/* FOOTER */
+.footer{
+  padding:20px 10px;
   font-size:13px;
   color:#aaa;
-}
-
-#liveActivity{
-  margin-top:15px;
-  font-size:13px;
-  color:#ffd700;
-}
-
-.disclaimer{
-  margin-top:20px;
-  font-size:11px;
-  color:#777;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<section class="hero">
+
+  <img src="https://uploads.onecompiler.io/446vwj75z/447fxgqeq/WhatsApp%20Image%202025-12-13%20at%2014.05.45.jpeg"
+       alt="INDIAN TRADER Logo">
+  <div class="trader-name">
+    🤴𝐆𝐔𝐉𝐀𝐑𝐀𝐓𝐈 𝐓𝐑𝐀𝐃𝐄𝐑🤴
+  </div>
+                                                                                                                                                                                                                                                                                                 
+
+  <!-- TELEGRAM JOIN BUTTON -->
+  <a href="https://t.me/+g33lHbyBI_44ZmM1"
+     target="_blank"
+     class="cta subscribe-btn">
+    <i class="fab fa-telegram-plane"></i> 𝐉𝐎𝐈𝐍 𝐎𝐔𝐑 𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌
+  </a>
+
+  <h1></h1>
+  <p>Free Signals • Daily Analysis • Smart Risk Management</p>
+
+</section>
+
+<section class="info">
   <div class="card">
 
-    <!-- LOGO (FIXED LINK) -->
-    <img src="https://res.cloudinary.com/dqhbtoh8u/image/upload/v1774449836/WhatsApp_Image_2025-12-29_at_18.24.42_mklank.jpg"
-         class="logo"
-         onerror="this.src='https://i.imgur.com/2DhmtJ4.png';">
-
-    <h1>🤴ગુજરાતી Trader🤴</h1>
-    <div class="tag">Options Learning • Smart Trading</div>
-
-    <div class="trust">✔ No tips ✔ No fake promises ✔ Only learning</div>
-
-    <!-- CTA -->
-    <a href="https://t.me/+g33lHbyBI_44ZmM1" target="_blank" class="cta" id="joinBtn">
-      🚀 JOIN FREE TELEGRAM
-    </a>
-
-    <div class="features">
-      <div>📊 Nifty • BankNifty Analysis</div>
-      <div>🎯 Entry • Target • Stoploss System</div>
-      <div>🛡 Risk Management Focus</div>
-      <div>📚 Beginner Friendly Learning</div>
+    <div class="point">
+      <i class="fa-solid fa-chart-line"></i>
+      <span>Intraday, Options, NIFTY & BANKNIFTY Calls</span>
     </div>
 
-    <div class="badge">🟢 Active daily during market hours</div>
+    <div class="point">
+      <i class="fa-solid fa-bullseye"></i>
+      <span>Accurate Entry, Exit & Target Levels</span>
+    </div>
 
-    <div id="liveActivity">🟢 Loading activity...</div>
+    <div class="point">
+      <i class="fa-solid fa-shield"></i>
+      <span>Risk Management Focused Strategy</span>
+    </div>
 
-    <div class="disclaimer">
-      Educational purpose only. Trading involves risk.
+    <div class="point">
+      <i class="fa-solid fa-fire"></i>
+      <span>Daily Free & Premium Market Analysis</span>
     </div>
 
   </div>
+</section>
+
+<div class="footer">
+  © 2026 HARSH BHAGAT • All Rights Reserved
 </div>
 
-<!-- ✅ UPDATED TRACKING SYSTEM -->
+<!-- TRACKING SCRIPT -->
 <script>
-const LEAD_KEY = "telegram_lead_tracked";
-const btn = document.getElementById('joinBtn');
+const PAGEVIEW_KEY = "gt_pageview_tracked";
+const SUBSCRIBE_KEY = "gt_subscribe_tracked";
 
-btn.addEventListener('click', function(e){
-
-    e.preventDefault();
-
-    if(localStorage.getItem(LEAD_KEY) === "true"){
-        window.open(btn.href, "_blank");
-        return;
-    }
-
-    btn.innerText = "Opening...";
-    btn.style.pointerEvents = "none";
-
-    setTimeout(function(){
-
-        fbq('track','Lead');
-        fbq('trackCustom','TelegramJoin',{
-            source:'Landing Page',
-            platform:'Telegram'
-        });
-
-        localStorage.setItem(LEAD_KEY, "true");
-
-        window.open(btn.href, "_blank");
-
-    }, 800);
-
-});
-</script>
-
-<!-- LIVE ACTIVITY -->
-<script>
-const names = [
-"Amit Patel","Rahul Sharma","Vikram Singh","Rohit Mehta","Karan Gupta",
-"Suresh Yadav","Deepak Kumar","Manish Patel","Arjun Singh","Nitin Sharma"
-];
-
-function showActivity(){
-    const randomName = names[Math.floor(Math.random()*names.length)];
-    const time = Math.floor(Math.random()*5)+1;
-    document.getElementById("liveActivity").innerHTML =
-    "🟢 " + randomName + " joined " + time + " min ago";
+/* PAGE VIEW - ONLY ONCE */
+if (!localStorage.getItem(PAGEVIEW_KEY)) {
+    fbq('track', 'PageView');
+    localStorage.setItem(PAGEVIEW_KEY, "true");
+    console.log("✅ PageView tracked");
 }
 
-setInterval(showActivity,3000);
-showActivity();
+/* TELEGRAM JOIN - ONLY ONCE */
+document.querySelector(".subscribe-btn").addEventListener("click", function () {
+
+    if (!localStorage.getItem(SUBSCRIBE_KEY)) {
+
+        fbq('track', 'Lead');
+        fbq('trackCustom', 'TelegramSubscribe', {
+            source: 'Landing Page',
+            platform: 'Telegram'
+        });
+
+        localStorage.setItem(SUBSCRIBE_KEY, "true");
+        console.log("✅ Subscribe tracked");
+    }
+});
 </script>
 
 </body>
